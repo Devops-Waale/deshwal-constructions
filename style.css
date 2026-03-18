@@ -541,3 +541,15 @@ img { max-width: 100%; }
 @media (max-width: 900px) {
   .firm-intro-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
+/* ===== SERVICE CATEGORY LABELS ===== */
+.services-category-label {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-head); font-weight: 900; font-size: 1rem;
+  color: var(--dark); margin-bottom: 24px; margin-top: 48px;
+  padding-bottom: 12px; border-bottom: 2px solid var(--orange);
+}
+.services-category-label:first-of-type { margin-top: 0; }
+.services-category-label i { color: var(--orange); font-size: 1.1rem; }
+.services-category-label.manpower { color: var(--dark); border-color: #25D366; }
+.services-category-label.manpower i { color: #25D366; }
