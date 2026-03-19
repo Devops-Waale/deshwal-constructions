@@ -282,7 +282,12 @@ img { max-width: 100%; display: block; }
 }
 .cert-item i { color: var(--orange); }
 .about-content .section-tag { display: inline-block; }
-.about-content h2 { font-family: var(--font-head); font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; margin: 12px 0 16px; line-height: 1.2; }
+.about-content h2 { font-family: var(--font-head); font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; margin: 12px 0 6px; line-height: 1.2; }
+.tagline-shine {
+  font-family: var(--font-head); font-style: italic; font-weight: 600;
+  font-size: 0.85rem; color: var(--orange); letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
 .about-content p { color: var(--gray); line-height: 1.8; margin-bottom: 14px; font-size: 0.9rem; }
 .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 24px; }
 .feature { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-weight: 600; font-size: 0.8rem; }
