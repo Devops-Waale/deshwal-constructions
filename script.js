@@ -28,7 +28,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   const city     = inputs[4].value;
   const message  = inputs[5].value.trim();
 
-  const text = `Hello Deshwal Constructions! 🏗️
+  const text = `Hello Viraj Infra & Services! 🏗️
 
 *New Enquiry from Website*
 
