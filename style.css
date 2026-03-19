@@ -82,15 +82,36 @@ img { max-width: 100%; }
   max-width: 1200px; margin: 0 auto; padding: 0 24px;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
 }
-.logo { display: flex; align-items: center; gap: 12px; }
+.logo { display: flex; align-items: center; gap: 10px; }
 .logo-icon {
-  width: 48px; height: 48px; background: var(--orange); border-radius: 8px;
-  display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--orange) 0%, #ff8c00 100%);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 1.2rem;
+  box-shadow: 0 4px 14px rgba(255,107,0,0.45);
+  position: relative;
 }
-.logo-text { display: flex; flex-direction: column; line-height: 1.2; }
-.logo-main { font-family: var(--font-head); font-weight: 900; font-size: 1.1rem; color: var(--white); letter-spacing: 2px; }
-.logo-sub { font-family: var(--font-head); font-weight: 700; font-size: 0.68rem; color: var(--orange); letter-spacing: 1.5px; }
-.logo-tagline { font-family: var(--font-head); font-weight: 600; font-size: 0.6rem; color: var(--orange); letter-spacing: 1.5px; font-style: italic; }
+.logo-icon::after {
+  content: ''; position: absolute; inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 60%);
+}
+.logo-text { display: flex; flex-direction: column; line-height: 1; gap: 2px; }
+.logo-main {
+  font-family: var(--font-head); font-weight: 900; font-size: 1.15rem;
+  color: var(--white); letter-spacing: 3px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+}
+.logo-sub {
+  font-family: var(--font-head); font-weight: 600; font-size: 0.62rem;
+  color: rgba(255,255,255,0.75); letter-spacing: 2.5px; text-transform: uppercase;
+}
+.logo-tagline {
+  font-family: var(--font-head); font-weight: 500; font-size: 0.56rem;
+  color: var(--orange); letter-spacing: 1px; font-style: italic;
+  opacity: 0.95;
+}
 
 /* Hero Logo */
 .hero-logo {
@@ -106,9 +127,6 @@ img { max-width: 100%; }
   padding: 6px;
   box-shadow: 0 0 50px rgba(255,107,0,0.25), 0 0 100px rgba(255,107,0,0.1);
 }
-.logo-text { display: flex; flex-direction: column; line-height: 1.2; }
-.logo-main { font-family: var(--font-head); font-weight: 900; font-size: 1.2rem; color: var(--white); letter-spacing: 2px; }
-.logo-sub { font-family: var(--font-head); font-weight: 700; font-size: 0.72rem; color: var(--orange); letter-spacing: 1.5px; }
 .nav-links { display: flex; gap: 28px; }
 .nav-links a {
   font-family: var(--font-head); font-weight: 600; font-size: 0.82rem;
