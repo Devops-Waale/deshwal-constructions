@@ -90,7 +90,7 @@ img { max-width: 100%; }
 .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
 .logo-main { font-family: var(--font-head); font-weight: 900; font-size: 1.1rem; color: var(--white); letter-spacing: 2px; }
 .logo-sub { font-family: var(--font-head); font-weight: 700; font-size: 0.68rem; color: var(--orange); letter-spacing: 1.5px; }
-.logo-tagline { font-family: var(--font-head); font-weight: 500; font-size: 0.58rem; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; font-style: italic; }
+.logo-tagline { font-family: var(--font-head); font-weight: 600; font-size: 0.6rem; color: var(--orange); letter-spacing: 1.5px; font-style: italic; }
 
 /* Hero Logo */
 .hero-logo {
