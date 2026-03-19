@@ -275,6 +275,17 @@ img { max-width: 100%; }
   font-family: var(--font-head); font-weight: 700; font-size: 0.68rem;
   letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px;
 }
+.project-tag.ongoing { background: rgba(37,211,102,0.12); color: #25D366; }
+.project-live-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: #25D366; color: white;
+  font-family: var(--font-head); font-weight: 700; font-size: 0.65rem;
+  letter-spacing: 1px; padding: 3px 10px; border-radius: 20px;
+  animation: pulse-live 1.8s infinite;
+}
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; } 50% { opacity: 0.6; }
+}
 .project-info h4 { font-family: var(--font-head); font-weight: 700; font-size: 0.98rem; margin-bottom: 8px; }
 .project-info p { color: var(--gray); font-size: 0.86rem; line-height: 1.6; }
 
