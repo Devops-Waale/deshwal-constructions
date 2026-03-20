@@ -135,7 +135,7 @@ img { max-width: 100%; display: block; }
 /* ===== HERO ===== */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 40%, #2d1a00 100%);
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.75)), url('images/towerpic2.avif') center/cover no-repeat;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   position: relative; overflow: hidden; padding: 120px 20px 60px;
 }
@@ -165,8 +165,8 @@ img { max-width: 100%; display: block; }
   letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px;
 }
 .hero-content h1 {
-  font-family: var(--font-head); font-size: clamp(1.8rem, 5vw, 3.8rem);
-  font-weight: 900; color: var(--white); line-height: 1.15; margin-bottom: 16px;
+  font-family: var(--font-head); font-size: clamp(1.4rem, 3.5vw, 2.6rem);
+  font-weight: 900; color: var(--white); line-height: 1.25; margin-bottom: 16px;
 }
 .hero-content h1 span { color: var(--orange); }
 .hero-desc {
@@ -188,6 +188,15 @@ img { max-width: 100%; display: block; }
 .stat { text-align: center; }
 .stat-num { display: block; font-family: var(--font-head); font-size: 1.9rem; font-weight: 900; color: var(--orange); }
 .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.5); letter-spacing: 0.8px; }
+
+/* ===== TAGLINE STRIP ===== */
+.tagline-strip {
+  background: var(--orange); padding: 18px 0; text-align: center;
+}
+.tagline-strip p {
+  font-family: var(--font-head); font-size: clamp(0.85rem, 2vw, 1.15rem);
+  font-weight: 700; color: var(--white); letter-spacing: 0.5px; margin: 0;
+}
 
 /* ===== FIRM INTRO ===== */
 .firm-intro { padding: 80px 0; background: var(--light); }
@@ -215,7 +224,7 @@ img { max-width: 100%; display: block; }
 .highlight-card p { color: var(--gray); font-size: 0.82rem; line-height: 1.5; margin: 0; }
 
 /* ===== SERVICES ===== */
-.services { padding: 80px 0; background: var(--light); }
+.services { padding: 80px 0; background: var(--white); }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
 .service-card {
   background: var(--white); border-radius: 12px; padding: 32px 24px;
@@ -253,7 +262,7 @@ img { max-width: 100%; display: block; }
 .services-category-label.manpower i { color: #25D366; }
 
 /* ===== ABOUT ===== */
-.about { padding: 80px 0; }
+.about { padding: 80px 0; background: var(--light); }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .about-visual { position: relative; }
 .about-img-box { position: relative; margin-bottom: 20px; }
@@ -286,7 +295,7 @@ img { max-width: 100%; display: block; }
 .feature i { color: var(--orange); font-size: 0.9rem; flex-shrink: 0; }
 
 /* ===== PROJECTS ===== */
-.projects { padding: 80px 0; background: var(--light); }
+.projects { padding: 80px 0; background: var(--white); }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 .project-card { background: var(--white); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; border: 1px solid #eee; min-width: 0; }
 .project-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
@@ -311,7 +320,7 @@ img { max-width: 100%; display: block; }
 .project-info p { color: var(--gray); font-size: 0.84rem; line-height: 1.6; }
 
 /* ===== HOW WE WORK ===== */
-.process { padding: 80px 0; background: var(--white); }
+.process { padding: 80px 0; background: var(--light); }
 .process-steps {
   display: flex; align-items: flex-start; justify-content: center;
   gap: 0; flex-wrap: wrap;
@@ -360,7 +369,7 @@ img { max-width: 100%; display: block; }
 .gallery-overlay span { font-family: var(--font-head); font-weight: 700; font-size: 0.78rem; }
 
 /* ===== TESTIMONIALS ===== */
-.testimonials { padding: 80px 0; background: var(--white); }
+.testimonials { padding: 80px 0; background: var(--light); }
 .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
 .testimonial-card {
   background: var(--light); border-radius: 12px; padding: 28px 24px;
@@ -391,7 +400,7 @@ img { max-width: 100%; display: block; }
 .why-card p { color: rgba(255,255,255,0.5); font-size: 0.82rem; line-height: 1.6; }
 
 /* ===== CONTACT ===== */
-.contact { padding: 80px 0; }
+.contact { padding: 80px 0; background: var(--white); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; }
 .contact-info { display: flex; flex-direction: column; gap: 20px; }
 .contact-item { display: flex; align-items: flex-start; gap: 14px; }
