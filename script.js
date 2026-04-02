@@ -104,3 +104,31 @@ document.getElementById('careerForm').addEventListener('submit', function(e) {
     this.reset();
   }, 3000);
 });
+
+// WhatsApp Chat Widget toggle
+const waToggle = document.getElementById('waToggle');
+const waPopup = document.getElementById('waPopup');
+const waClose = document.getElementById('waClose');
+const waIconOpen = document.getElementById('waIconOpen');
+const waIconClose = document.getElementById('waIconClose');
+
+function openWaPopup() {
+  waPopup.classList.add('active');
+  waIconOpen.style.display = 'none';
+  waIconClose.style.display = '';
+}
+
+function closeWaPopup() {
+  waPopup.classList.remove('active');
+  waIconOpen.style.display = '';
+  waIconClose.style.display = 'none';
+}
+
+waToggle.addEventListener('click', () => {
+  waPopup.classList.contains('active') ? closeWaPopup() : openWaPopup();
+});
+
+waClose.addEventListener('click', closeWaPopup);
+
+// Auto-popup after 3 seconds
+setTimeout(openWaPopup, 3000);

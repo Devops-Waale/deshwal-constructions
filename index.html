@@ -791,10 +791,45 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/918860911709?text=Hello%2C%20I%20am%20interested%20in%20a%20free%20quote." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+  <!-- WhatsApp Chat Widget -->
+  <div class="wa-widget" id="waWidget">
+    <div class="wa-popup" id="waPopup">
+      <div class="wa-popup-header">
+        <div class="wa-popup-title">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <h4>Viraj Infra & Services</h4>
+            <span>Typically replies within minutes</span>
+          </div>
+        </div>
+        <button class="wa-popup-close" id="waClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="wa-popup-body">
+        <p class="wa-greeting">Hi there 👋<br/>How can we help you?</p>
+        <div class="wa-options">
+          <a href="https://wa.me/918860911709?text=Hi%2C%20I%20want%20a%20free%20quote%20for%20my%20construction%20project." target="_blank" class="wa-option">
+            <i class="fas fa-hard-hat"></i> Get a Free Quote
+          </a>
+          <a href="https://wa.me/918860911709?text=Hi%2C%20I%20am%20interested%20in%20a%20job%20opportunity%20at%20Viraj%20Infra." target="_blank" class="wa-option">
+            <i class="fas fa-briefcase"></i> Career / Job Enquiry
+          </a>
+          <a href="https://wa.me/918860911709?text=Hi%2C%20I%20want%20to%20discuss%20a%20project%20requirement." target="_blank" class="wa-option">
+            <i class="fas fa-clipboard-list"></i> Project Discussion
+          </a>
+          <a href="https://wa.me/918860911709?text=Hi%2C%20I%20need%20manpower%20supply%20for%20my%20site." target="_blank" class="wa-option">
+            <i class="fas fa-users"></i> Manpower Requirement
+          </a>
+          <a href="https://wa.me/918860911709?text=Hello%2C%20I%20have%20a%20query." target="_blank" class="wa-option">
+            <i class="fas fa-comment-dots"></i> General Query
+          </a>
+        </div>
+      </div>
+    </div>
+    <button class="wa-float-btn" id="waToggle" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp" id="waIconOpen"></i>
+      <i class="fas fa-times" id="waIconClose" style="display:none;"></i>
+    </button>
+  </div>
 
   <script src="script.js"></script>
 </body>
