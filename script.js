@@ -63,10 +63,44 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll(
-  '.service-card, .project-card, .why-card, .contact-item, .testimonial-card, .cert-item'
+  '.service-card, .project-card, .why-card, .contact-item, .testimonial-card, .cert-item, .career-card'
 ).forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(30px)';
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(el);
+});
+
+// Career form submission — sends data via WhatsApp
+document.getElementById('careerForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const inputs = this.querySelectorAll('input, select, textarea');
+  const name       = inputs[0].value.trim();
+  const phone      = inputs[1].value.trim();
+  const position   = inputs[2].value;
+  const experience = inputs[3].value.trim();
+  const skills     = inputs[4].value.trim();
+
+  const text = `Hello Viraj Infra & Services! 🏗️
+
+*New Job Application from Website*
+
+👤 *Name:* ${name}
+📞 *Phone:* ${phone}
+💼 *Position:* ${position}
+📅 *Experience:* ${experience || 'Not specified'}
+🔧 *Skills:* ${skills}`;
+
+  const waURL = `https://wa.me/918860911709?text=${encodeURIComponent(text)}`;
+  window.open(waURL, '_blank');
+
+  const btn = this.querySelector('button[type="submit"]');
+  btn.innerHTML = '<i class="fas fa-check"></i> Redirecting to WhatsApp...';
+  btn.style.background = '#25D366';
+  setTimeout(() => {
+    btn.innerHTML = '<i class="fab fa-whatsapp"></i> Submit Application via WhatsApp';
+    btn.style.background = '';
+    this.reset();
+  }, 3000);
 });

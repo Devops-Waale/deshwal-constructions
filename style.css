@@ -396,6 +396,81 @@ img { max-width: 100%; display: block; }
 .testimonial-author h5 { font-family: var(--font-head); font-weight: 700; font-size: 0.88rem; margin-bottom: 2px; }
 .testimonial-author span { color: var(--gray); font-size: 0.76rem; }
 
+/* ===== CAREERS ===== */
+.careers { padding: 0 0 80px; background: var(--white); }
+.careers-banner {
+  background: var(--dark); padding: 60px 0 48px; text-align: center; margin-bottom: 48px;
+}
+.careers-banner .section-tag { display: inline-block; margin-bottom: 12px; }
+.careers-banner h2 {
+  font-family: var(--font-head); font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 900; color: var(--white); margin-bottom: 12px;
+}
+.careers-banner p { color: rgba(255,255,255,0.6); font-size: 0.92rem; max-width: 500px; margin: 0 auto; line-height: 1.7; }
+.careers-content { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: start; }
+.careers-openings h3, .careers-form-wrap h3 {
+  font-family: var(--font-head); font-weight: 700; font-size: 1.05rem; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px;
+}
+.careers-openings h3 i, .careers-form-wrap h3 i { color: var(--orange); }
+.careers-grid { display: flex; flex-direction: column; gap: 14px; }
+.career-card {
+  background: var(--light); border-radius: 12px; padding: 20px;
+  border: 1px solid #ddd; transition: all 0.3s;
+}
+.career-card:hover { border-color: var(--orange); box-shadow: 0 8px 24px rgba(255,107,0,0.08); }
+.career-header { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.career-icon {
+  width: 44px; height: 44px; min-width: 44px; background: rgba(255,107,0,0.1); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--orange); font-size: 1rem;
+}
+.career-card h4 { font-family: var(--font-head); font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; }
+.career-card p { color: var(--gray); font-size: 0.82rem; line-height: 1.6; margin: 0; }
+.career-tag {
+  display: inline-block; background: rgba(255,107,0,0.1); color: var(--orange);
+  font-family: var(--font-head); font-weight: 700; font-size: 0.64rem;
+  letter-spacing: 0.5px; padding: 3px 8px; border-radius: 20px;
+}
+.careers-perks {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;
+}
+.careers-perks span {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--light); border: 1px solid #ddd; border-radius: 8px;
+  padding: 8px 14px; font-family: var(--font-head); font-weight: 600;
+  font-size: 0.76rem; color: var(--dark);
+}
+.careers-perks span i { color: var(--orange); font-size: 0.8rem; }
+.careers-form-wrap {
+  background: var(--light); border-radius: 16px; padding: 32px 28px;
+  border: 1px solid #ddd; position: sticky; top: 100px;
+}
+.careers-form-desc { color: var(--gray); font-size: 0.85rem; margin: -10px 0 20px; }
+.resume-divider {
+  text-align: center; margin: 20px 0; position: relative;
+}
+.resume-divider::before {
+  content: ''; position: absolute; top: 50%; left: 0; right: 0;
+  height: 1px; background: #ddd;
+}
+.resume-divider span {
+  background: var(--light); padding: 0 14px; position: relative;
+  font-family: var(--font-head); font-weight: 700; font-size: 0.75rem;
+  color: var(--gray); letter-spacing: 1px;
+}
+.resume-drop { text-align: center; }
+.resume-drop p {
+  font-family: var(--font-head); font-weight: 600; font-size: 0.82rem;
+  color: var(--dark); margin-bottom: 12px; display: flex; align-items: center;
+  justify-content: center; gap: 8px;
+}
+.resume-drop p i { color: var(--orange); }
+.resume-drop .btn { font-size: 0.78rem; }
+.resume-hint {
+  display: block; margin-top: 8px; font-size: 0.72rem; color: var(--gray);
+}
+
 /* ===== WHY US ===== */
 .why-us { padding: 80px 0; background: var(--dark); }
 .why-us .section-tag { background: rgba(255,107,0,0.2); }
@@ -491,6 +566,8 @@ img { max-width: 100%; display: block; }
 
 /* ===== RESPONSIVE — TABLET (max 900px) ===== */
 @media (max-width: 900px) {
+  .careers-content { grid-template-columns: 1fr; gap: 36px; }
+  .careers-form-wrap { position: static; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-badge { bottom: -12px; right: -8px; }
   .contact-grid { grid-template-columns: 1fr; gap: 36px; }
