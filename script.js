@@ -132,3 +132,42 @@ waClose.addEventListener('click', closeWaPopup);
 
 // Auto-popup after 3 seconds
 setTimeout(openWaPopup, 3000);
+
+// Site Gallery Slider
+const slider = document.getElementById('siteSlider');
+const slides = slider.querySelectorAll('.site-slide');
+const prevBtn = document.getElementById('sliderPrev');
+const nextBtn = document.getElementById('sliderNext');
+const dotsContainer = document.getElementById('sliderDots');
+let currentSlide = 0;
+
+// Create dots
+slides.forEach((_, i) => {
+  const dot = document.createElement('button');
+  dot.classList.add('slider-dot');
+  if (i === 0) dot.classList.add('active');
+  dot.setAttribute('aria-label', `Slide ${i + 1}`);
+  dot.addEventListener('click', () => goToSlide(i));
+  dotsContainer.appendChild(dot);
+});
+
+function goToSlide(index) {
+  currentSlide = index;
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  dotsContainer.querySelectorAll('.slider-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === currentSlide);
+  });
+}
+
+prevBtn.addEventListener('click', () => {
+  goToSlide(currentSlide > 0 ? currentSlide - 1 : slides.length - 1);
+});
+
+nextBtn.addEventListener('click', () => {
+  goToSlide(currentSlide < slides.length - 1 ? currentSlide + 1 : 0);
+});
+
+// Auto-slide every 4 seconds
+setInterval(() => {
+  goToSlide(currentSlide < slides.length - 1 ? currentSlide + 1 : 0);
+}, 4000);
