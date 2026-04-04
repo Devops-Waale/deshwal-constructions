@@ -171,3 +171,34 @@ nextBtn.addEventListener('click', () => {
 setInterval(() => {
   goToSlide(currentSlide < slides.length - 1 ? currentSlide + 1 : 0);
 }, 4000);
+
+// Counter animation for stat numbers
+const statNums = document.querySelectorAll('.stat-num[data-target]');
+let statsCounted = false;
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !statsCounted) {
+      statsCounted = true;
+      statNums.forEach(num => {
+        const target = parseInt(num.dataset.target);
+        const suffix = num.dataset.suffix || '';
+        const duration = 2000;
+        const step = Math.ceil(target / (duration / 30));
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          num.textContent = current + suffix;
+        }, 30);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+const heroStats = document.querySelector('.hero-stats');
+if (heroStats) statsObserver.observe(heroStats);
