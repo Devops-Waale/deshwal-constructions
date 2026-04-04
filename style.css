@@ -163,7 +163,7 @@ img { max-width: 100%; display: block; }
 }
 .hero-logo { margin-bottom: 16px; display: flex; justify-content: center; }
 .hero-logo img {
-  width: 140px; height: 140px; object-fit: contain;
+  width: 200px; height: 200px; object-fit: contain;
   border-radius: 50%; background: rgba(255,255,255,0.05);
   border: 2px solid rgba(200,146,42,0.25); padding: 6px;
   box-shadow: 0 0 30px rgba(200,146,42,0.15), 0 0 60px rgba(200,146,42,0.06);
@@ -750,7 +750,7 @@ img { max-width: 100%; display: block; }
   .nav-wa { display: none; }
 
   .hero { padding: 90px 16px 48px; }
-  .hero-logo img { width: 110px; height: 110px; }
+  .hero-logo img { width: 150px; height: 150px; }
   .hero-stats { gap: 16px; margin-top: 28px; }
   .stat-num { font-size: 1.5rem; }
   .stat-label { font-size: 0.68rem; }
